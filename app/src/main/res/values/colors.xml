@@ -3,4 +3,18 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- pie chart color -->
+    <color name="pie_chart_color_0">#1599ff</color>
+    <color name="pie_chart_color_1">#4ccfca</color>
+    <color name="pie_chart_color_2">#2abf7d</color>
+    <color name="pie_chart_color_3">#fd993c</color>
+    <color name="pie_chart_color_4">#ef8f8f</color>
+    <color name="pie_chart_color_5">#adde5d</color>
+    <color name="pie_chart_color_6">#5fbff6</color>
+    <color name="pie_chart_color_7">#3fc568</color>
+    <color name="pie_chart_color_8">#94de5d</color>
+    <color name="pie_chart_color_9">#c6de5d</color>
+    <color name="pie_chart_color_10">#c6de5e</color>
+    <color name="pie_chart_color_11">#7cde5c</color>
 </resources>

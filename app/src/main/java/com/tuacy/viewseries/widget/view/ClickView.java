@@ -3,6 +3,7 @@ package com.tuacy.viewseries.widget.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -13,12 +14,13 @@ import com.tuacy.viewseries.utils.DensityUtils;
 
 public class ClickView extends View {
 
-	private final static int DEFAULT_SIZE_DP = 50;
+	private final static int DEFAULT_SIZE_DP = 200;
 
 	private Context mContext;
 	private int     mRadius;
 	private int     mCenterX;
 	private int     mContentY;
+	private Paint mPaint;
 
 	public ClickView(Context context) {
 		this(context, null);
@@ -32,6 +34,7 @@ public class ClickView extends View {
 		super(context, attrs, defStyleAttr);
 		mContext = context;
 		initAttribute(attrs, defStyleAttr);
+		init();
 	}
 
 	// DensityUtils.sp2px(getContext(), 14)
@@ -39,6 +42,11 @@ public class ClickView extends View {
 	private void initAttribute(AttributeSet attrs, int defStyleAttr) {
 		TypedArray typeArray = mContext.obtainStyledAttributes(attrs, R.styleable.ClickView, defStyleAttr, 0);
 		typeArray.recycle();
+	}
+
+	private void init() {
+		mPaint = new Paint();
+		mPaint.setAntiAlias(true);
 	}
 
 	@Override
@@ -75,5 +83,8 @@ public class ClickView extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
+		canvas.translate(mCenterX, mContentY);
+		mPaint.setStyle(Paint.Style.STROKE);
+		canvas.drawCircle(0, 0, mRadius, mPaint);
 	}
 }

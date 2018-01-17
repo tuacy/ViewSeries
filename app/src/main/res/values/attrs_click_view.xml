@@ -1,5 +1,5 @@
 <resources>
     <declare-styleable name="ClickView">
-
+        <attr name="click_ring_width" format="dimension" />
     </declare-styleable>
 </resources>
