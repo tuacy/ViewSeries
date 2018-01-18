@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ClickActivity"
+            android:label="时钟" />
+        <activity
+            android:name=".PieChartActivity"
+            android:label="饼状图" />
     </application>
 
 </manifest>

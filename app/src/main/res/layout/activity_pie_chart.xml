@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.tuacy.viewseries.widget.view.PieChartView
+        android:id="@+id/pie_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:pie_chart_circle_radius = "110dp"
+        app:pie_chart_ring_normal_width="25dp"
+        app:pie_chart_ring_select_width="35dp"
+        app:pie_chart_inner_circle_space="15dp"
+        app:pie_chart_marker_line_length="35dp"
+        app:pie_chart_value_size="16sp"
+        app:pie_chart_title_text="标题"
+        app:pie_chart_title_size="14sp"
+        app:pie_chart_unit_text="单位"
+        app:pie_chart_unit_size="14dp"/>
+
+</LinearLayout>

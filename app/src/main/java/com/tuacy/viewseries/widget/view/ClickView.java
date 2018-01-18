@@ -3,9 +3,11 @@ package com.tuacy.viewseries.widget.view;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
 
 import com.tuacy.viewseries.R;
@@ -20,7 +22,9 @@ public class ClickView extends View {
 	private int     mRadius;
 	private int     mCenterX;
 	private int     mContentY;
-	private Paint mPaint;
+	private int     mRingWidth;
+	private int     mRingColor;
+	private Paint   mPaint;
 
 	public ClickView(Context context) {
 		this(context, null);
@@ -37,10 +41,12 @@ public class ClickView extends View {
 		init();
 	}
 
-	// DensityUtils.sp2px(getContext(), 14)
-	// Color.parseColor("#FFFFFF")
 	private void initAttribute(AttributeSet attrs, int defStyleAttr) {
 		TypedArray typeArray = mContext.obtainStyledAttributes(attrs, R.styleable.ClickView, defStyleAttr, 0);
+		mRingWidth = typeArray.getDimensionPixelOffset(R.styleable.ClickView_click_ring_width,
+													   (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4,
+																					   getResources().getDisplayMetrics()));
+		mRingColor = typeArray.getColor(R.styleable.ClickView_click_ring_color, Color.parseColor("#FF989C9F"));
 		typeArray.recycle();
 	}
 
@@ -84,7 +90,18 @@ public class ClickView extends View {
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 		canvas.translate(mCenterX, mContentY);
+		drawRing(canvas);
+		drawScale(canvas);
+	}
+
+	private void drawRing(Canvas canvas) {
 		mPaint.setStyle(Paint.Style.STROKE);
-		canvas.drawCircle(0, 0, mRadius, mPaint);
+		mPaint.setColor(mRingColor);
+		mPaint.setStrokeWidth(mRingWidth);
+		canvas.drawCircle(0, 0, mRadius - mRingWidth / 2, mPaint);
+	}
+
+	private void drawScale(Canvas canvas) {
+
 	}
 }

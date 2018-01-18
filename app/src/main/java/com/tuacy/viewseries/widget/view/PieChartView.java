@@ -202,42 +202,42 @@ public class PieChartView extends View {
 	private void initAttrs(AttributeSet attrs, int defStyleAttr) {
 		final TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.PieChartView, defStyleAttr, 0);
 
-		mPieRadius = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_circle_radius,
+		mPieRadius = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_circle_radius,
 											 (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80,
 																			 getResources().getDisplayMetrics()));
 
-		mLabelTextSize = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_label_text_size,
+		mLabelTextSize = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_label_text_size,
 												 (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 8,
 																				 getResources().getDisplayMetrics()));
-		mRingNormalWidth = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_ring_normal_width,
+		mRingNormalWidth = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_ring_normal_width,
 												   (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20,
 																				   getResources().getDisplayMetrics()));
-		mRingSelectWidth = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_ring_select_width,
+		mRingSelectWidth = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_ring_select_width,
 												   (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25,
 																				   getResources().getDisplayMetrics()));
-		mInnerCircleSpace = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_inner_circle_space,
+		mInnerCircleSpace = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_inner_circle_space,
 													(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10,
 																					getResources().getDisplayMetrics()));
 		mLabelTextColor = a.getColor(R.styleable.PieChartView_pie_chart_label_text_color, 0xff696969);
 		mInnerCircleColor = a.getColor(R.styleable.PieChartView_pie_chart_inner_circle_color, 0xffffffff);
 		mLabelRatioOrValue = a.getBoolean(R.styleable.PieChartView_pie_chart_label_show_radio, false);
-		mMarkerLineLength = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_marker_line_length,
+		mMarkerLineLength = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_marker_line_length,
 													(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25,
 																					getResources().getDisplayMetrics()));
 		mMarkerLineColor = a.getColor(R.styleable.PieChartView_pie_chart_marker_line_color, 0xff696969);
 		mRotateEnable = a.getBoolean(R.styleable.PieChartView_pie_chart_can_rotate, true);
 		mTitleText = a.getString(R.styleable.PieChartView_pie_chart_title_text);
-		mTitleSize = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_title_size,
+		mTitleSize = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_title_size,
 											 (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 14,
 																			 getResources().getDisplayMetrics()));
 		mTitleColor = a.getColor(R.styleable.PieChartView_pie_chart_title_color, 0xff696969);
 		mUnitText = a.getString(R.styleable.PieChartView_pie_chart_unit_text);
-		mUnitSize = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_unit_size,
+		mUnitSize = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_unit_size,
 											(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 14,
 																			getResources().getDisplayMetrics()));
 		mUnitColor = a.getColor(R.styleable.PieChartView_pie_chart_unit_color, 0xff696969);
 
-		mValueSize = a.getDimensionPixelSize(R.styleable.PieChartView_pie_chart_value_size,
+		mValueSize = a.getDimensionPixelOffset(R.styleable.PieChartView_pie_chart_value_size,
 											 (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 16,
 																			 getResources().getDisplayMetrics()));
 		mValueColor = a.getColor(R.styleable.PieChartView_pie_chart_value_color, 0xff1DA9F8);
