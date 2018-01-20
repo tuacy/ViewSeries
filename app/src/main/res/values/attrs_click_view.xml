@@ -2,5 +2,20 @@
     <declare-styleable name="ClickView">
         <attr name="click_ring_width" format="dimension" />
         <attr name="click_ring_color" format="color" />
+        <attr name="click_hour_scale_width" format="dimension" />
+        <attr name="click_hour_scale_height" format="dimension" />
+        <attr name="click_hour_scale_color" format="color" />
+        <attr name="click_minuter_scale_width" format="dimension" />
+        <attr name="click_minuter_scale_height" format="dimension" />
+        <attr name="click_minuter_scale_color" format="color" />
+        <attr name="click_scale_text_size" format="dimension" />
+        <attr name="click_scale_text_color" format="color" />
+        <attr name="click_scale_text_space" format="dimension" />
+        <attr name="click_hour_pointer_width" format="dimension" />
+        <attr name="click_hour_pointer_color" format="color" />
+        <attr name="click_minuter_pointer_width" format="dimension" />
+        <attr name="click_minuter_pointer_color" format="color" />
+        <attr name="click_second_pointer_width" format="dimension" />
+        <attr name="click_second_pointer_color" format="color" />
     </declare-styleable>
 </resources>
